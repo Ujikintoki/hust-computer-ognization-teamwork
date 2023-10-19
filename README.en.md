@@ -1,36 +1,14 @@
 # Hust-ComputerOganization-Teamwork
 
 #### Description
-华中科技大学组原课设团队作业
+Huazhong University of Science and Technology originally set up a team homework obstacle avoidance game
 
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### List of members
+Guo Yongxiang, Zhang Yadi, Li Chenhao
 
 #### Instructions
+Software architecture description
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### Instructions
+Control the player to move left and right, and obstacles will fall from above. Blood will be deducted when it hits an obstacle, and the game ends when the HP is 0.
 
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
-
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
