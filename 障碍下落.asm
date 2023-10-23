@@ -1,5 +1,5 @@
 .text
-j main_function
+ j main_function
 
 goldcoin_start:
 addi s3, zero, 1
@@ -12,10 +12,10 @@ goldcoin0:
 sw s0, 32(zero)    # 放置金币
 sw s0, 60(zero)
 sw s0, 80(zero)
-addi   a1,zero,34  # 显示金币
+addi   a0,zero,34  # 显示金币
 ecall
-addi s9, zero, 1
-sll s0, s0, s9   # 金币位置左移一格
+#addi s9, zero, 1
+slli s0, s0, 1   # 金币位置左移一格
 addi s4, s4, 1
 bne s4, s5, goldcoin0
 addi s4, zero, 0
@@ -27,11 +27,11 @@ sw s0, 80(zero)
 sw s1, 16(zero)
 sw s1, 48(zero)
 sw s1, 128(zero)
-addi   a1,zero,34  # 显示金币
+addi   a0,zero,34  # 显示金币
 ecall
-addi s9, zero, 1
-sll s0, s0, s9   # 金币位置左移一格
-sll s1, s1, s9   # 金币位置左移一格
+#addi s9, zero, 1
+slli s0, s0, 1   # 金币位置左移一格
+slli s1, s1, 1   # 金币位置左移一格
 addi s4, s4, 1
 bne s4, s5, goldcoin1
 addi s4, zero, 0
@@ -45,12 +45,12 @@ sw s1, 96(zero)
 sw s2, 8(zero)
 sw s2, 40(zero)
 sw s2, 64(zero)
-addi   a1,zero,34  # 显示金币
+addi   a0,zero,34  # 显示金币
 ecall
-addi s9, zero, 1
-sll s0, s0, s9   # 金币位置左移一格
-sll s1, s1, s9   # 金币位置左移一格
-sll s2, s2, s9   # 金币位置左移一格
+#addi s9, zero, 1
+slli s0, s0, 1   # 金币位置左移一格
+slli s1, s1, 1   # 金币位置左移一格
+slli s2, s2, 1   # 金币位置左移一格
 addi s4, s4, 1
 bne s4, s5, goldcoin2
 addi s4, zero, 0
@@ -66,12 +66,12 @@ sw s1, 96(zero)
 sw s2, 8(zero)
 sw s2, 40(zero)
 sw s2, 64(zero)
-addi   a1,zero,34  # 显示金币
+addi   a0,zero,34  # 显示金币
 ecall
-addi s9, zero, 1
-sll s0, s0, s9   # 金币位置左移一格
-sll s1, s1, s9   # 金币位置左移一格
-sll s2, s2, s9   # 金币位置左移一格
+#addi s9, zero, 1
+slli s0, s0, 1   # 金币位置左移一格
+slli s1, s1, 1   # 金币位置左移一格
+slli s2, s2, 1   # 金币位置左移一格
 addi s4, s4, 1
 bne s4, s5, hhhh
 addi s4, zero, 0
@@ -86,12 +86,12 @@ sw s1, 96(zero)
 sw s2, 8(zero)
 sw s2, 40(zero)
 sw s2, 64(zero)
-addi   a1,zero,34  # 显示金币
+addi   a0,zero,34  # 显示金币
 ecall
-addi s9, zero, 1
-sll s0, s0, s9   # 金币位置左移一格
-sll s1, s1, s9   # 金币位置左移一格
-sll s2, s2, s9   # 金币位置左移一格
+#addi s9, zero, 1
+slli s0, s0, 1   # 金币位置左移一格
+slli s1, s1, 1   # 金币位置左移一格
+slli s2, s2, 1   # 金币位置左移一格
 addi s4, s4, 1
 bne s4, s5, iiii
 addi s4, zero, 0
@@ -106,12 +106,12 @@ sw s1, 96(zero)
 sw s2, 8(zero)
 sw s2, 40(zero)
 sw s2, 64(zero)
-addi   a1,zero,34  # 显示金币
+addi   a0,zero,34  # 显示金币
 ecall
-addi s9, zero, 1
-sll s0, s0, s9   # 金币位置左移一格
-sll s1, s1, s9   # 金币位置左移一格
-sll s2, s2, s9   # 金币位置左移一格
+#addi s9, zero, 1
+slli s0, s0, 1   # 金币位置左移一格
+slli s1, s1, 1   # 金币位置左移一格
+slli s2, s2, 1   # 金币位置左移一格
 addi s4, s4, 1
 bne s4, s5, jjjj
 addi s4, zero, 0

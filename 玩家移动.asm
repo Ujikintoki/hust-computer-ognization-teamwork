@@ -1,78 +1,79 @@
 .text
-j main_function
+ j main_function
 
 
-#å¼€å§‹æ¸¸æˆ
+#¿ªÊ¼ÓÎÏ·
 game_start:
-bne s2, zero, not_first #å¤šæ¬¡ç‚¹å‡»å¼€å§‹æ²¡ç”¨
+bne s2, zero, not_first #¶à´Îµã»÷¿ªÊ¼Ã»ÓÃ
 addi s2, zero, 1
 
 not_first:
 uret
 
 
-#å°è½¦ä¸‹ç§»
+#Ğ¡³µÏÂÒÆ
 interrupt_down:
 
-#å¼€å§‹æ‰èƒ½åŠ¨
+#¿ªÊ¼²ÅÄÜ¶¯
 beq s2, zero, not_start1
 
-#èµ°åˆ°è¾¹ç•Œ
+#×ßµ½±ß½ç
 addi s8, zero, 116
 beq s1, s8, border
 
-sw zero, 0(s1)       #æ¸…ç©ºå½“å‰è¡Œ
-addi s1, s1, 4    #å°è½¦è¡Œæ•°åŠ ä¸€
-sw s0, 0(s1)      #æ•°æ®å­˜å…¥æ–°è¡Œ
-addi a1, zero, 34    
+sw zero, 0(s1)       #Çå¿Õµ±Ç°ĞĞ
+addi s1, s1, 4    #Ğ¡³µĞĞÊı¼ÓÒ»
+sw s0, 0(s1)      #Êı¾İ´æÈëĞÂĞĞ¡Œ
+addi a0, zero, 34    
 ecall
 
 not_start1:
 uret
 
 
-#å°è½¦ä¸Šç§»
+#Ğ¡³µÉÏÒÆ
 interrupt_up:
 
-#å¼€å§‹æ‰èƒ½åŠ¨
+#¿ªÊ¼²ÅÄÜ¶¯
 beq s2, zero, not_start2
 
-#èµ°åˆ°è¾¹ç•Œ
-addi s8, zero, 8
+#×ßµ½±ß½ç?addi s8, zero, 8
 beq s1, s8, border
 
 sw zero, 0(s1)
 addi t1, zero, 4     
 sub s1, s1, t1
 sw s0, 0(s1) 
-addi a1, zero, 34  
+addi a0, zero, 34  
 ecall
 
 not_start2:
 uret
 
-#è¾¹ç•Œï¼Œå‘å‡ºè­¦å‘Š
+#±ß½ç£¬·¢³ö¾¯¸æ
 border: 
-addi a1, zero, 100 
+addi a0, zero, 100 
 ecall
 uret
 
 
 main_function:
 
-addi s0, zero, 0x7ff  
-addi s8, zero, 16
-sll  s0, s0, s8     #åˆå§‹Xåæ ‡
-addi s1, zero, 64      #åˆå§‹Yåæ ‡
+addi s0, zero, 0x400  
+slli  s0, s0, 21     #³õÊ¼X×ø±ê
+addi s1, zero, 64      #³õÊ¼Y×ø±ê
 
-#é“è·¯å¸ƒå±€
-addi t6, zero, 0x400
-addi s8, zero, 12
-sll t6, t6, s8
-ori t6, t6, 0x7ff
-addi s8, zero, 8
-sll t6, t6, s8
+#µÀÂ·²¼¾Ö
+addi t6, zero, 0xff
+slli t6, t6, 8
 ori t6, t6, 0xff
+
+slli t6, t6, 8
+ori t6, t6, 0xff
+
+slli t6, t6, 8
+ori t6, t6, 0xff
+
 sw t6, 0(zero)
 
 sw t6, 4(zero)
@@ -137,11 +138,11 @@ sw t6, 112(zero)
 sw t6, 116(zero)
 
 addi t6, zero, 0x400
-addi s8, zero, 20
-sll t6, t6, s8
+slli t6, t6, 21
+
 sw t6, 64(zero)
 
-addi   a1,zero,34
+addi   a0,zero,34
 ecall
 
 nop_cycle:
